@@ -17,8 +17,8 @@ public class ResultadoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultado);
 
-        imageResult = findViewById(R.id.imageResult);
-        botaoVoltar = findViewById(R.id.buttonVoltar);
+        imageResult = findViewById(R.id.imageResultado);
+        botaoVoltar = findViewById(R.id.botaoVoltar);
 
         //Recuperar dados
         Bundle dados = getIntent().getExtras();
@@ -32,10 +32,10 @@ public class ResultadoActivity extends AppCompatActivity {
             imageResult.setImageResource(R.drawable.moeda_coroa);
         }
 
-        botaoVoltar.setOnClickListener(new View.OnClickListener() {
+       botaoVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                finish();
             }
         });
     }

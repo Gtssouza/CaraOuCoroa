@@ -12,7 +12,6 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonJogar;
-    private int numero;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +26,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),ResultadoActivity.class);
 
-                startActivity(intent);
-                numero = new Random().nextInt(2);
+                int numero = new Random().nextInt(2);
                 intent.putExtra("numero", numero);
+                
+                startActivity(intent);
+
             }
         });
 
